@@ -1,0 +1,121 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: mocks
+spec:
+    metadata:
+        name: Http
+        operation: POST
+        type: HTTP_CLIENT
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /v2/track
+        header:
+            Content-Encoding: gzip
+            Content-Length: "896"
+            Content-Type: application/x-json-stream
+        body: !!binary |
+            H4sIAAAAAAAAA6xUTW/dNhD8K4JOKWA98/vDNyNuWiNubSROD70tl0tbsCw9SHpugyD/vU
+            s9O86hR+siaLkaDmdm+a0d4ZHas/Z8v//1icZ1aU/atd9KSijdSdVJeSvdmQxnUu18qFX9
+            N3f1H+krd3mDKDFSp8lRZ7KwXdIFu5wpSiGzUNZUTLhb2rNvLfS7TE890m5a/qJ56aeRQT
+            KlHkZu42UcpkPezdNAl+OywoiVy9A/QnfsYkq7d+M00i/H/oWWirLrM/fJkow1oXQ6eMts
+            iugSJdnZYorRlBFEOP7WjyvNIwy7JT/8RGRaR1rxTO2U3InOqNh+P2kzrFDJJ1jo9uu+Et
+            rEuqj1k6188dzyRHN7pk5eZD3ineLQnz4u6dAP+XSF+Y7WMnPDP9P8QE8wMMZ+nvY0rz1t
+            Kl1M+EBz834aV+jHCtl+gGEhbvwD8J5LzeVFcz3UI+dijHRWm6jARm+TKMIhFCzaGO11jk
+            LIwmZon4NxppCylkjkSBYcVDluN0ofXii9ykEagTBGjCVZRcnoIEspyoKgApCct0Fm5TKm
+            6GPQAQyS1vzm/3JOjH39uTmfmfJKuB7mLWrzo6uR+HQYa9IuMyvZl347ZUlaMV+hVEC0oA
+            wqZ9B6qWOmkEqwpmBwBSV/SBSGOUhQyWIyKSrJsDfzlA+4Nq+nCDuxk0Lw2jkrXADX5QbW
+            +6sJYeWOZ0ffYOvrw7o/rM0nyv3Mx6X8k29XfUJeGYjDwmVOdhp+1F+5qp12XP2y0A+uR9
+            S3YfiZhvKSqsrOkFUaLJBNxmmH3kYhk48FSso6SkVGZmRrvZGGXAhJxGw4B45ToJJ+tbG5
+            zNucjod/O3h2mOqQNNtgFnCUNIVORxs6kwR1KfBgBpctRRMwiDpKlRtDTIelueQBvZs3h/
+            43/m8T/aO4zxHQpigk4HO6aCH6gLZollIIvsyy8dlnB1YJRO2jYBViStpJpl5vQSuejdvv
+            76dl3fhRCCIKtJQ9oCpasVtFsEtKlQwmB8yKRwrZw4Aes8vJWVccqSxCNewjX1I0/BSQi+
+            0SbH7788vpVRW7kap5l6bpgSf3sV6J7w/zXGWvEW9+h+W+zjHFWLwVIMmVFIrGyksrIwN4
+            kk5ALjkUFF6iAYVGsGAKYxLSU/T+OMc3A6yFd2HAbetj9ZWaVO13fv4DAAD//wMAh/dynl
+            QGAAA=
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Name, Content-Type, Accept, Cache-Control, Sdk-Context
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Max-Age: "3600"
+            Content-Length: 49,49
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 11 Dec 2023 16:24:43 GMT
+            Strict-Transport-Security: max-age=31536000
+            X-Content-Type-Options: nosniff
+            X-Ms-Session-Id: 3CDD3343-3884-4943-B038-C766D488173E
+        body: '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    created: 1702311884
+    reqTimestampMock: 2023-12-11T16:24:44.00221638Z
+    resTimestampMock: 2023-12-11T16:24:44.156414516Z
+---
+version: api.keploy.io/v1beta1
+kind: Http
+name: mocks
+spec:
+    metadata:
+        name: Http
+        operation: POST
+        type: HTTP_CLIENT
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /v2/track
+        header:
+            Content-Encoding: gzip
+            Content-Length: "897"
+            Content-Type: application/x-json-stream
+        body: !!binary |
+            H4sIAAAAAAAAA6xUS2/cNhD+K4JOCWDJfD/2ZsRJa8StjcTpobfhcGgLlqWFpHUbBPnvHW
+            nt2IcevRdhh8Phx+/BH/UAD1Tv6rP9/uMjDctcn9RLt5WUULqRqpHyRrqdFDslWiNs0Er+
+            zV3dZ/rOXd4gSozUaHLUmCxsk3TBJmeKUsgslDXrTLid692PGro202OH1I7zXzTN3TjwkE
+            ypg4HbeBn78ZDbaezpYpgXGHDF0ncP0By7GFL7bhgHen/sn2lep7Rd5j4TTYlQZKOAoDHk
+            UhOLzU1JNinlKEaVj9u6YaFpgL6d8/0rIOMy0II71SrZisaoWP88qTMssIJPMNPN9/0KaC
+            PrfK2fbOXzp5ZHmuqdOnmm9TjvFPvu9GFOh67PpwtMt7SUiRv+Gad7eoSeZ+yncU/T0tHG
+            0vmI9zRVH8ZhgW5YR9afoJ+JG/8AvONSdXFeXfXrlXMxRjqrTVRgo7dJFOEQChZtjPY6Ry
+            FkYTG0z8E4U0hZSyRyJAsOAs+82SB9eob0QgdpBMIYMTKBipLRQZZSlAVBBSA5b4PMymVM
+            0cegAxgkrfnL+3JOPPvqa3U2MeSFcDlMm9WmB7da4sthWJ12kZnJrnTbLUvSivEKpQKiBW
+            VQOYPWSx0zhVSCNQWDKyj5j0RhGIMElSwmk6KSPPZ6GvMBl+rlFqEVrRSC186Y4QK4zNew
+            3F2OCAt3PCn6BkdfHZb9Yam+UO4mvi7lV7pddgl5pSc2C5fZ2an/VX/BqlrtuPptpl9Yj1
+            PfBuFX6suzq7a8kFUaLJBNxmmH3kYhk48FSso6SkVGZmRpvZGcphCSiNmwDxy7QCX9ImN1
+            kbecDod/G3hSmNaQVFswlefs5aQbGziTxqbSREu60cDelKE4LxTvWLHxiPEwVxcc0NtpU+
+            h/7f821j+S+2QBbYpCAr6nixaiD2iLZiqF4McsG599dmCVQNQ+CmYhpqSdDALWV9CKJ+H2
+            +7txXjZ8FIKIAi1lD6iKVqxWEaySUiWDyQGz4kghaxjQY3Y5OeuKI5VFWAX7zI8U9a8Mcr
+            49gtVvf347vVzJrqSq3qVxvOfkPqxP4ofDNK20rxavfof5bs0xk1+8FSDJlRSKxhWXVkYG
+            8CSdgFxyKCi8RAMKjWDCFMYkJOvm/THH1z0shU/hgdvRx+oLNKnqn/z7DwAA//8DAD/JUV
+            9UBgAA
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Name, Content-Type, Accept, Cache-Control, Sdk-Context
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Max-Age: "3600"
+            Content-Length: 49,49
+            Content-Type: application/json; charset=utf-8
+            Date: Mon, 11 Dec 2023 16:24:44 GMT
+            Strict-Transport-Security: max-age=31536000
+            X-Content-Type-Options: nosniff
+            X-Ms-Session-Id: A053D94D-17DA-47D4-A55A-6AEEDFEABDC8
+        body: '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    created: 1702311884
+    reqTimestampMock: 2023-12-11T16:24:44.205256914Z
+    resTimestampMock: 2023-12-11T16:24:44.395517297Z

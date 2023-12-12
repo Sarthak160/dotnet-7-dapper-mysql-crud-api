@@ -16,7 +16,7 @@ public class DataContext
 
     public IDbConnection CreateConnection()
     {
-        var connectionString = $"Server={_dbSettings.Server}; Database={_dbSettings.Database}; Uid={_dbSettings.UserId}; Pwd={_dbSettings.Password};";
+        var connectionString = $"Server={_dbSettings.Server}; Database={_dbSettings.Database}; Uid={_dbSettings.UserId}; Pwd={_dbSettings.Password}; SslMode=none;";
         return new MySqlConnection(connectionString);
     }
 
@@ -29,7 +29,7 @@ public class DataContext
     private async Task _initDatabase()
     {
         // create database if it doesn't exist
-       var connectionString = $"Server={_dbSettings.Server}; Uid={_dbSettings.UserId}; Pwd={_dbSettings.Password}; SslMode=None;";
+       var connectionString = $"Server={_dbSettings.Server}; Uid={_dbSettings.UserId}; Pwd={_dbSettings.Password}; SslMode=none;";
         using var connection = new MySqlConnection(connectionString);
         var sql = $"CREATE DATABASE IF NOT EXISTS `{_dbSettings.Database}`;";
         await connection.ExecuteAsync(sql);

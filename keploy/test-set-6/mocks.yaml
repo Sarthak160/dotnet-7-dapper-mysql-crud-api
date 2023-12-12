@@ -1,0 +1,1790 @@
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: HANDSHAKE_RESPONSE
+        responseOperation: HANDSHAKE_RESPONSE_OK
+        type: config
+    requests:
+        - header:
+            packet_length: 279
+            packet_number: 1
+            packet_type: HANDSHAKE_RESPONSE
+          message:
+            capability_flags: 417309191
+            max_packet_size: 16777215
+            character_set: 33
+            reserved:
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+            username: root
+            auth_data:
+                - 67
+                - 55
+                - 221
+                - 69
+                - 215
+                - 245
+                - 228
+                - 113
+                - 15
+                - 83
+                - 25
+                - 192
+                - 44
+                - 164
+                - 156
+                - 64
+                - 237
+                - 141
+                - 146
+                - 200
+                - 88
+                - 103
+                - 195
+                - 237
+                - 56
+                - 134
+                - 211
+                - 45
+                - 55
+                - 255
+                - 188
+                - 243
+            database: caching_sha2_password
+            auth_plugin_name: ""
+    responses:
+        - header:
+            packet_length: 73
+            packet_number: 0
+            packet_type: MySQLHandshakeV10
+          message:
+            protocol_version: 10
+            server_version: 8.1.0
+            connection_id: 99
+            auth_plugin_data:
+                - 103
+                - 20
+                - 73
+                - 74
+                - 77
+                - 23
+                - 126
+                - 56
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 113
+                - 127
+                - 72
+            capability_flags: 3758096383
+            character_set: 255
+            status_flags: 2
+            auth_plugin_name: caching_sha2_password
+        - header:
+            packet_length: 2
+            packet_number: 2
+            packet_type: HANDSHAKE_RESPONSE_OK
+          message:
+            packet_indicator: AuthMoreData
+            plugin_details:
+                type: cachingSha2PasswordFastAuthSuccess
+                message: Ok
+            remaining_bytes:
+                - 7
+                - 0
+                - 0
+                - 3
+                - 0
+                - 0
+                - 0
+                - 2
+                - 0
+                - 0
+                - 0
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: RESULT_SET_PACKET
+        type: mocks
+    requests:
+        - header:
+            packet_length: 154
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SELECT @@max_allowed_packet, @@character_set_client, \n        @@character_set_connection, @@license, @@sql_mode, @@lower_case_table_names, @@autocommit"
+    responses:
+        - header:
+            packet_length: 1
+            packet_number: 1
+            packet_type: RESULT_SET_PACKET
+          message:
+            columns:
+                - packet_header:
+                    packet_length: 42
+                    packet_sequence_id: 2
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@max_allowed_packet'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 21
+                  column_type: 8
+                  flags: 160
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 44
+                    packet_sequence_id: 3
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@character_set_client'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 65535
+                  column_type: 253
+                  flags: 0
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 48
+                    packet_sequence_id: 4
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@character_set_connection'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 65535
+                  column_type: 253
+                  flags: 0
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 31
+                    packet_sequence_id: 5
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@license'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 65535
+                  column_type: 253
+                  flags: 0
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 32
+                    packet_sequence_id: 6
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@sql_mode'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 65535
+                  column_type: 253
+                  flags: 0
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 46
+                    packet_sequence_id: 7
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@lower_case_table_names'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 21
+                  column_type: 8
+                  flags: 160
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 34
+                    packet_sequence_id: 8
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@autocommit'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 1
+                  column_type: 8
+                  flags: 128
+                  decimals: 0
+                  string: ""
+            rows:
+                - header:
+                    packet_length: 151
+                    sequence_id: 10
+                  row_column_definition:
+                    - type: 8
+                      name: '@@max_allowed_packet'
+                      value:
+                        - 54
+                        - 55
+                        - 49
+                        - 48
+                        - 56
+                        - 56
+                        - 54
+                        - 52
+                    - type: 253
+                      name: '@@character_set_client'
+                      value: utf8mb3
+                    - type: 253
+                      name: '@@character_set_connection'
+                      value: utf8mb3
+                    - type: 253
+                      name: '@@license'
+                      value: GPL
+                    - type: 253
+                      name: '@@sql_mode'
+                      value: ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+                    - type: 8
+                      name: '@@lower_case_table_names'
+                      value:
+                        - 48
+                    - type: 8
+                      name: '@@autocommit'
+                      value:
+                        - 49
+            eofPresent: true
+            paddingPresent: false
+            eofPresentFinal: true
+            paddingPresentFinal: false
+            optionalPadding: false
+            optionalEOFBytes:
+                - 5
+                - 0
+                - 0
+                - 11
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+            eofAfterColumns:
+                - 5
+                - 0
+                - 0
+                - 9
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: RESULT_SET_PACKET
+        type: mocks
+    requests:
+        - header:
+            packet_length: 42
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SELECT TIMEDIFF(NOW(), UTC_TIMESTAMP())"
+    responses:
+        - header:
+            packet_length: 1
+            packet_number: 1
+            packet_type: RESULT_SET_PACKET
+          message:
+            columns:
+                - packet_header:
+                    packet_length: 54
+                    packet_sequence_id: 2
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: TIMEDIFF(NOW(), UTC_TIMESTAMP())
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 10
+                  column_type: 11
+                  flags: 128
+                  decimals: 0
+                  string: ""
+            rows:
+                - header:
+                    packet_length: 9
+                    sequence_id: 4
+                  row_column_definition:
+                    - type: 11
+                      name: TIMEDIFF(NOW(), UTC_TIMESTAMP())
+                      value: "00:00:00"
+            eofPresent: true
+            paddingPresent: false
+            eofPresentFinal: true
+            paddingPresentFinal: false
+            optionalPadding: false
+            optionalEOFBytes:
+                - 5
+                - 0
+                - 0
+                - 5
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+            eofAfterColumns:
+                - 5
+                - 0
+                - 0
+                - 3
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: RESULT_SET_PACKET
+        type: mocks
+    requests:
+        - header:
+            packet_length: 17
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SHOW COLLATION"
+    responses:
+        - header:
+            packet_length: 1
+            packet_number: 1
+            packet_type: RESULT_SET_PACKET
+          message:
+            columns:
+                - packet_header:
+                    packet_length: 78
+                    packet_sequence_id: 2
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Collation
+                  org_name: Collation
+                  next_length: 0
+                  character_set: 33
+                  column_length: 192
+                  column_type: 253
+                  flags: 4097
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 74
+                    packet_sequence_id: 3
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Charset
+                  org_name: Charset
+                  next_length: 0
+                  character_set: 33
+                  column_length: 192
+                  column_type: 253
+                  flags: 4097
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 64
+                    packet_sequence_id: 4
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Id
+                  org_name: Id
+                  next_length: 0
+                  character_set: 63
+                  column_length: 20
+                  column_type: 8
+                  flags: 33
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 74
+                    packet_sequence_id: 5
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Default
+                  org_name: Default
+                  next_length: 0
+                  character_set: 33
+                  column_length: 9
+                  column_type: 253
+                  flags: 1
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 76
+                    packet_sequence_id: 6
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Compiled
+                  org_name: Compiled
+                  next_length: 0
+                  character_set: 33
+                  column_length: 9
+                  column_type: 253
+                  flags: 1
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 74
+                    packet_sequence_id: 7
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Sortlen
+                  org_name: Sortlen
+                  next_length: 0
+                  character_set: 63
+                  column_length: 10
+                  column_type: 3
+                  flags: 4129
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 86
+                    packet_sequence_id: 8
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Pad_attribute
+                  org_name: Pad_attribute
+                  next_length: 0
+                  character_set: 33
+                  column_length: 27
+                  column_type: 254
+                  flags: 4481
+                  decimals: 0
+                  string: ""
+            rows: []
+            eofPresent: false
+            paddingPresent: false
+            eofPresentFinal: true
+            paddingPresentFinal: false
+            optionalPadding: false
+            optionalEOFBytes:
+                - 5
+                - 0
+                - 0
+                - 9
+                - 254
+                - 0
+                - 0
+                - 34
+                - 0
+            eofAfterColumns: []
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: MySQLOK
+        type: mocks
+    requests:
+        - header:
+            packet_length: 20
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SET NAMES utf8mb4"
+    responses:
+        - header:
+            packet_length: 107
+            packet_number: 1
+            packet_type: MySQLOK
+          message:
+            affected_rows: 0
+            last_insert_id: 0
+            status_flags: 16386
+            warnings: 0
+            info: "\0b\0\x1D\x14character_set_client\autf8mb4\0!\x18character_set_connection\autf8mb4\0\x1E\x15character_set_results\autf8mb4"
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: MySQLOK
+        type: mocks
+    requests:
+        - header:
+            packet_length: 33
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SET character_set_results=NULL"
+    responses:
+        - header:
+            packet_length: 34
+            packet_number: 1
+            packet_type: MySQLOK
+          message:
+            affected_rows: 0
+            last_insert_id: 0
+            status_flags: 16386
+            warnings: 0
+            info: "\0\x19\0\x17\x15character_set_results\0"
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: MySQLOK
+        type: mocks
+    requests:
+        - header:
+            packet_length: 41
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01CREATE DATABASE IF NOT EXISTS `testdb`"
+    responses:
+        - header:
+            packet_length: 7
+            packet_number: 1
+            packet_type: MySQLOK
+          message:
+            affected_rows: 1
+            last_insert_id: 0
+            status_flags: 2
+            warnings: 1
+            info: ""
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: RESULT_SET_PACKET
+        type: mocks
+    requests:
+        - header:
+            packet_length: 16
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SHOW WARNINGS"
+    responses:
+        - header:
+            packet_length: 1
+            packet_number: 1
+            packet_type: RESULT_SET_PACKET
+          message:
+            columns:
+                - packet_header:
+                    packet_length: 27
+                    packet_sequence_id: 2
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: Level
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 21
+                  column_type: 253
+                  flags: 1
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 26
+                    packet_sequence_id: 3
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: Code
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 5
+                  column_type: 3
+                  flags: 161
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 29
+                    packet_sequence_id: 4
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: Message
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 1536
+                  column_type: 253
+                  flags: 1
+                  decimals: 31
+                  string: ""
+            rows:
+                - header:
+                    packet_length: 58
+                    sequence_id: 6
+                  row_column_definition:
+                    - type: 253
+                      name: Level
+                      value: Note
+                    - type: 3
+                      name: Code
+                      value: 808464644
+                    - type: 253
+                      name: Message
+                      value: /Can't create database 'testdb'; database exists
+            eofPresent: true
+            paddingPresent: false
+            eofPresentFinal: false
+            paddingPresentFinal: false
+            optionalPadding: false
+            optionalEOFBytes: []
+            eofAfterColumns:
+                - 5
+                - 0
+                - 0
+                - 5
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: HANDSHAKE_RESPONSE
+        responseOperation: HANDSHAKE_RESPONSE_OK
+        type: config
+    requests:
+        - header:
+            packet_length: 286
+            packet_number: 1
+            packet_type: HANDSHAKE_RESPONSE
+          message:
+            capability_flags: 417309199
+            max_packet_size: 16777215
+            character_set: 33
+            reserved:
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+            username: root
+            auth_data:
+                - 133
+                - 6
+                - 174
+                - 225
+                - 205
+                - 130
+                - 209
+                - 124
+                - 152
+                - 208
+                - 82
+                - 162
+                - 177
+                - 203
+                - 116
+                - 227
+                - 18
+                - 180
+                - 88
+                - 160
+                - 78
+                - 37
+                - 61
+                - 252
+                - 239
+                - 12
+                - 56
+                - 246
+                - 121
+                - 234
+                - 101
+                - 95
+            database: testdb
+            auth_plugin_name: ""
+    responses:
+        - header:
+            packet_length: 73
+            packet_number: 0
+            packet_type: MySQLHandshakeV10
+          message:
+            protocol_version: 10
+            server_version: 8.1.0
+            connection_id: 100
+            auth_plugin_data:
+                - 1
+                - 33
+                - 96
+                - 88
+                - 76
+                - 60
+                - 4
+                - 124
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 0
+                - 57
+                - 25
+                - 1
+            capability_flags: 3758096383
+            character_set: 255
+            status_flags: 2
+            auth_plugin_name: caching_sha2_password
+        - header:
+            packet_length: 2
+            packet_number: 2
+            packet_type: HANDSHAKE_RESPONSE_OK
+          message:
+            packet_indicator: AuthMoreData
+            plugin_details:
+                type: cachingSha2PasswordFastAuthSuccess
+                message: Ok
+            remaining_bytes:
+                - 18
+                - 0
+                - 0
+                - 3
+                - 0
+                - 0
+                - 0
+                - 2
+                - 64
+                - 0
+                - 0
+                - 0
+                - 9
+                - 1
+                - 7
+                - 6
+                - 116
+                - 101
+                - 115
+                - 116
+                - 100
+                - 98
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: RESULT_SET_PACKET
+        type: mocks
+    requests:
+        - header:
+            packet_length: 154
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SELECT @@max_allowed_packet, @@character_set_client, \n        @@character_set_connection, @@license, @@sql_mode, @@lower_case_table_names, @@autocommit"
+    responses:
+        - header:
+            packet_length: 1
+            packet_number: 1
+            packet_type: RESULT_SET_PACKET
+          message:
+            columns:
+                - packet_header:
+                    packet_length: 42
+                    packet_sequence_id: 2
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@max_allowed_packet'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 21
+                  column_type: 8
+                  flags: 160
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 44
+                    packet_sequence_id: 3
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@character_set_client'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 65535
+                  column_type: 253
+                  flags: 0
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 48
+                    packet_sequence_id: 4
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@character_set_connection'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 65535
+                  column_type: 253
+                  flags: 0
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 31
+                    packet_sequence_id: 5
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@license'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 65535
+                  column_type: 253
+                  flags: 0
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 32
+                    packet_sequence_id: 6
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@sql_mode'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 33
+                  column_length: 65535
+                  column_type: 253
+                  flags: 0
+                  decimals: 31
+                  string: ""
+                - packet_header:
+                    packet_length: 46
+                    packet_sequence_id: 7
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@lower_case_table_names'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 21
+                  column_type: 8
+                  flags: 160
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 34
+                    packet_sequence_id: 8
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: '@@autocommit'
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 1
+                  column_type: 8
+                  flags: 128
+                  decimals: 0
+                  string: ""
+            rows:
+                - header:
+                    packet_length: 151
+                    sequence_id: 10
+                  row_column_definition:
+                    - type: 8
+                      name: '@@max_allowed_packet'
+                      value:
+                        - 54
+                        - 55
+                        - 49
+                        - 48
+                        - 56
+                        - 56
+                        - 54
+                        - 52
+                    - type: 253
+                      name: '@@character_set_client'
+                      value: utf8mb3
+                    - type: 253
+                      name: '@@character_set_connection'
+                      value: utf8mb3
+                    - type: 253
+                      name: '@@license'
+                      value: GPL
+                    - type: 253
+                      name: '@@sql_mode'
+                      value: ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+                    - type: 8
+                      name: '@@lower_case_table_names'
+                      value:
+                        - 48
+                    - type: 8
+                      name: '@@autocommit'
+                      value:
+                        - 49
+            eofPresent: true
+            paddingPresent: false
+            eofPresentFinal: true
+            paddingPresentFinal: false
+            optionalPadding: false
+            optionalEOFBytes:
+                - 5
+                - 0
+                - 0
+                - 11
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+            eofAfterColumns:
+                - 5
+                - 0
+                - 0
+                - 9
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: RESULT_SET_PACKET
+        type: mocks
+    requests:
+        - header:
+            packet_length: 42
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SELECT TIMEDIFF(NOW(), UTC_TIMESTAMP())"
+    responses:
+        - header:
+            packet_length: 1
+            packet_number: 1
+            packet_type: RESULT_SET_PACKET
+          message:
+            columns:
+                - packet_header:
+                    packet_length: 54
+                    packet_sequence_id: 2
+                  catalog: def
+                  schema: ""
+                  table: ""
+                  org_table: ""
+                  name: TIMEDIFF(NOW(), UTC_TIMESTAMP())
+                  org_name: ""
+                  next_length: 0
+                  character_set: 63
+                  column_length: 10
+                  column_type: 11
+                  flags: 128
+                  decimals: 0
+                  string: ""
+            rows:
+                - header:
+                    packet_length: 9
+                    sequence_id: 4
+                  row_column_definition:
+                    - type: 11
+                      name: TIMEDIFF(NOW(), UTC_TIMESTAMP())
+                      value: "00:00:00"
+            eofPresent: true
+            paddingPresent: false
+            eofPresentFinal: true
+            paddingPresentFinal: false
+            optionalPadding: false
+            optionalEOFBytes:
+                - 5
+                - 0
+                - 0
+                - 5
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+            eofAfterColumns:
+                - 5
+                - 0
+                - 0
+                - 3
+                - 254
+                - 0
+                - 0
+                - 2
+                - 0
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: RESULT_SET_PACKET
+        type: mocks
+    requests:
+        - header:
+            packet_length: 17
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SHOW COLLATION"
+    responses:
+        - header:
+            packet_length: 1
+            packet_number: 1
+            packet_type: RESULT_SET_PACKET
+          message:
+            columns:
+                - packet_header:
+                    packet_length: 78
+                    packet_sequence_id: 2
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Collation
+                  org_name: Collation
+                  next_length: 0
+                  character_set: 33
+                  column_length: 192
+                  column_type: 253
+                  flags: 4097
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 74
+                    packet_sequence_id: 3
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Charset
+                  org_name: Charset
+                  next_length: 0
+                  character_set: 33
+                  column_length: 192
+                  column_type: 253
+                  flags: 4097
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 64
+                    packet_sequence_id: 4
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Id
+                  org_name: Id
+                  next_length: 0
+                  character_set: 63
+                  column_length: 20
+                  column_type: 8
+                  flags: 33
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 74
+                    packet_sequence_id: 5
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Default
+                  org_name: Default
+                  next_length: 0
+                  character_set: 33
+                  column_length: 9
+                  column_type: 253
+                  flags: 1
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 76
+                    packet_sequence_id: 6
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Compiled
+                  org_name: Compiled
+                  next_length: 0
+                  character_set: 33
+                  column_length: 9
+                  column_type: 253
+                  flags: 1
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 74
+                    packet_sequence_id: 7
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Sortlen
+                  org_name: Sortlen
+                  next_length: 0
+                  character_set: 63
+                  column_length: 10
+                  column_type: 3
+                  flags: 4129
+                  decimals: 0
+                  string: ""
+                - packet_header:
+                    packet_length: 86
+                    packet_sequence_id: 8
+                  catalog: def
+                  schema: information_schema
+                  table: COLLATIONS
+                  org_table: COLLATIONS
+                  name: Pad_attribute
+                  org_name: Pad_attribute
+                  next_length: 0
+                  character_set: 33
+                  column_length: 27
+                  column_type: 254
+                  flags: 4481
+                  decimals: 0
+                  string: ""
+            rows: []
+            eofPresent: false
+            paddingPresent: false
+            eofPresentFinal: true
+            paddingPresentFinal: false
+            optionalPadding: false
+            optionalEOFBytes:
+                - 5
+                - 0
+                - 0
+                - 9
+                - 254
+                - 0
+                - 0
+                - 34
+                - 0
+            eofAfterColumns: []
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: MySQLOK
+        type: mocks
+    requests:
+        - header:
+            packet_length: 20
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SET NAMES utf8mb4"
+    responses:
+        - header:
+            packet_length: 107
+            packet_number: 1
+            packet_type: MySQLOK
+          message:
+            affected_rows: 0
+            last_insert_id: 0
+            status_flags: 16386
+            warnings: 0
+            info: "\0b\0\x1D\x14character_set_client\autf8mb4\0!\x18character_set_connection\autf8mb4\0\x1E\x15character_set_results\autf8mb4"
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: MySQLOK
+        type: mocks
+    requests:
+        - header:
+            packet_length: 33
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01SET character_set_results=NULL"
+    responses:
+        - header:
+            packet_length: 34
+            packet_number: 1
+            packet_type: MySQLOK
+          message:
+            affected_rows: 0
+            last_insert_id: 0
+            status_flags: 16386
+            warnings: 0
+            info: "\0\x19\0\x17\x15character_set_results\0"
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: AUTH_MORE_DATA
+        responseOperation: MySQLOK
+        type: mocks
+    requests:
+        - header:
+            packet_length: 7
+            packet_number: 0
+            packet_type: AUTH_MORE_DATA
+          message:
+            plugin_data: 2
+    responses:
+        - header:
+            packet_length: 18
+            packet_number: 1
+            packet_type: MySQLOK
+          message:
+            affected_rows: 0
+            last_insert_id: 0
+            status_flags: 16386
+            warnings: 0
+            info: "\0\t\x01\a\x06testdb"
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: SQL
+name: mocks
+spec:
+    metadata:
+        operation: MySQLQuery
+        responseOperation: MySQLOK
+        type: mocks
+    requests:
+        - header:
+            packet_length: 280
+            packet_number: 0
+            packet_type: MySQLQuery
+          message:
+            command: 3
+            query: "\0\x01CREATE TABLE IF NOT EXISTS Users (\n        Id INT NOT NULL AUTO_INCREMENT,\n        Title VARCHAR(255),\n        FirstName VARCHAR(255),\n        LastName VARCHAR(255),\n        Email VARCHAR(255),\n        Role INT,\n        PasswordHash VARCHAR(255),\n        PRIMARY KEY (Id)\n    )"
+    responses:
+        - header:
+            packet_length: 7
+            packet_number: 1
+            packet_type: MySQLOK
+          message:
+            affected_rows: 0
+            last_insert_id: 0
+            status_flags: 2
+            warnings: 1
+            info: ""
+    created: 1702368751
+---
+version: api.keploy.io/v1beta1
+kind: Http
+name: mocks
+spec:
+    metadata:
+        name: Http
+        operation: POST
+        type: HTTP_CLIENT
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /v2/track
+        header:
+            Content-Encoding: gzip
+            Content-Length: "708"
+            Content-Type: application/x-json-stream
+        body: !!binary |
+            H4sIAAAAAAAAA6xUy27cOBD8FUGnLDCS+RJFzi3I7MNIdmMkTg57a5LNWLBGEijKu0GQf0
+            9T48QGco2gU7G7WF1d0pd6gjPWx/rlsvz+gFNe60Odhx0STMiGC3pvmTlycRSmVbw3TLN/
+            qWp4jZ+pqlfec2+xkaixUYF1jZPRNyGg5YwHJjpVOOHTWh+/1DC0AR8Gj+28fsS0DvNEJA
+            HdABOV0bEf5y20aR7xelozTL5oGYczNJcq0tO+mOYJf7vUr7gWlnYIVNdpxa3oRMNcxxrl
+            uWqM9LbRRkQmInDWwaVtmDKmCcZ2DffPhMx5wuyPohW8JQJh66+HOkCGIt7BireflyJoN+
+            tU8MMOnx5LHjDVR3H4buuF78qPw1WelxEfcFwgrZiu/Hw+wxSofUnzgikPuBt0mv09purV
+            PGUYpsJW/wHjilT4N/g7gqrrU/V2LNOGqBTXnVRWQGf7zrHItIfoo1RK9jJYxnikPcg+GK
+            VVRNF1iCxY7ECDIc6376uXiWgz+rylPQnprMvGbtIcNp+rJ3NMy1rOWOna8rLl6h2GIVEj
+            hmcq3wzO08mI5ArBtEI3/sCfyEQrNaHklyuTBISAwUAwqJSVMkqLuhdgjNFBWUeb66UJvX
+            EBObdOROy99KKLwatQ9L7bphLc6jrseZm2/xt4HAXLsqo9IAKdYj3FQhppGsWBN86Abqx2
+            vGNCB+kcdRT7iWLe1uqagvIpQb7I/nkXv2YPrymMOD7z57SHvfrznw9Xb8owFRfVCzfP9/
+            /N6Vyi/2pLqYx1A/mu+gvWO2pCtDb2HQOOOjoTpTeGWSkUN9Aj1wxCDCZ6csArEJ6sCEZ4
+            6xjv0fb9JRA3I+RItxDhfvUFfZLGRfkozrRgSsx5/2lQcG9Krqvb/d/B+9Ya2x3q9xlS3p
+            ZHuGet0Fp+pecbAAAA//8DAJa2Qgl5BAAA
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Name, Content-Type, Accept, Cache-Control, Sdk-Context
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Max-Age: "3600"
+            Content-Length: 49,49
+            Content-Type: application/json; charset=utf-8
+            Date: Tue, 12 Dec 2023 08:12:34 GMT
+            Strict-Transport-Security: max-age=31536000
+            X-Content-Type-Options: nosniff
+            X-Ms-Session-Id: A9A55AC0-4807-451F-883B-50C947A500BF
+        body: '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    created: 1702368756
+    reqTimestampMock: 2023-12-12T08:12:35.883879792Z
+    resTimestampMock: 2023-12-12T08:12:36.05653152Z
+---
+version: api.keploy.io/v1beta1
+kind: Http
+name: mocks
+spec:
+    metadata:
+        name: Http
+        operation: POST
+        type: HTTP_CLIENT
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /v2/track
+        header:
+            Content-Encoding: gzip
+            Content-Length: "838"
+            Content-Type: application/x-json-stream
+        body: !!binary |
+            H4sIAAAAAAAAA6xUy3LUSBD8FYVObGDJ/X7MDTxmmQCMAw8cuPWj2ghrpAk9vDgI/n2rJX
+            tts7G3nVDMoZRdnZWVqZ9l5w5QbspXx+P5LXTTWJ6UU7OUGGG8ogyfPTEbyjac1IIISpn+
+            iqjmHdwhSosQaLBQcVBQiUhk5XkKVYxgKaGRMClyT3c9lpufpWvqCLdNgLofv8AwNn2HTS
+            L4xnUIw9eh7edYD30Lu26cXBcyl7Y5uGpFIZ/6Rdd38MeKH2HMXeomIk4qQS2TrCJekkoE
+            KirDg62UYYmw5CiRbj3WdBMMnWvrMd48IdJPHUxhw2pGa2zAbPnrpIxucpm8dyPs746Z0C
+            LWNtdPlvL2HnILQ7lhJw+yrv1OQ9ucHkY/N208Xf7x1HHojzBMDSy6bPtwA0Nx1neTa7rc
+            pHzj2hEQ+MGFb1gqdtviY5uHjEkIqiQXljlptfQkERVcCokLwTWPlhCaUH6uoxFKJGBSAp
+            BoQTrlDPZ8nUmcd9fYd9uMx9bdPWpAdW1q/pJaCTpJxxH+8ap4NSCLCcI0D4tfhoPKe70c
+            +jiHqXg8bmpSU0IeLtm74RqmZTXSA0+GKa9cdJabRB1wG4PnSoLxSBa05oy7IAMxNFBNpc
+            P5pFac0ees3wwo8F/9cHOxCl1fnO8z0Xk6zlPxCWIzIFeIT3R83/iAb1rAdWEZveXbf+qP
+            /FnN1fO7fpemltSSPPynuctZKXZxsWg3/6jcvS6Q/VGsnmQcs5EwS97SSnDglQlEV0ELbW
+            0wnBP/cOHVHAL6GU/thxlWfb/jIJdu+pbDBkIxTk1SUVEVA/EC96uIY5AUbtaxEBwAeBYc
+            qgYonMWVc0OYAMnyUrLDkGk/j8UOI3A9uGmd7d92+3+s9g5jBu0TgbdLjIs/Lz6fvs+aFZ
+            QVL3zf3+A6DznUZ/MwZPXy0MVbN+bJAaxNWhJHUUpvEg/GEMuZoMZpoChBTNEk1JUGgTII
+            goRYsJ5QDVbr1cSXrZsS3oINl6vX6pP9suebf9uP2bpfrs76CPlLcEDzYAAOy5cSY7vrMK
+            vLge28KrnrPjRt24wQ+i4iBj9HtiZSsvvG/42zqjaE01/4+xsAAP//AwDXrznQlwUAAA==
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Name, Content-Type, Accept, Cache-Control, Sdk-Context
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Max-Age: "3600"
+            Content-Length: 49,49
+            Content-Type: application/json; charset=utf-8
+            Date: Tue, 12 Dec 2023 08:12:35 GMT
+            Strict-Transport-Security: max-age=31536000
+            X-Content-Type-Options: nosniff
+            X-Ms-Session-Id: BF335E52-D285-41F8-B8FC-0159E23064DB
+        body: '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    created: 1702368756
+    reqTimestampMock: 2023-12-12T08:12:36.060128596Z
+    resTimestampMock: 2023-12-12T08:12:36.348584468Z
+---
+version: api.keploy.io/v1beta1
+kind: Http
+name: mocks
+spec:
+    metadata:
+        name: Http
+        operation: POST
+        type: HTTP_CLIENT
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /v2/track
+        header:
+            Content-Encoding: gzip
+            Content-Length: "721"
+            Content-Type: application/x-json-stream
+        body: !!binary |
+            H4sIAAAAAAAAA6xTTW/UMBD9K1FOIG1S23G+9gYsHxUFChQO3Cb2eGvVG68cp1Ah/jvj7J
+            YuqEeinGbevHl+M/MzH2GH+Tp/tt+/vMUxTvkqj3YJCSaqggv6r1i35mItulJ2bV+13TdC
+            2bd4R6hWKsVVj0WFDRZSs7oYKqMKrbHnjGsmapk4YTvl65852FLjrVVY+ukrhsn6kUg0Dh
+            ZGglFaOT/rMniH5+MUYVRJi7M7KA4o0lM+Gf2ITw/4CafEUlpNuLqRvBe1KNhQs0IqLouu
+            Un3RdMIwYYCzGg5ldowYRnDlpG9OhPg4YlRrUQpeEoHo81+rXEOEJH6ACa/u9knQYtYmxV
+            dLeHOE3GLI12J1b+uB70w5e7abhtk6feb8dmvH7Qs/GrudA8TUeZXvg99jiBYXmzZe3WDI
+            CBTBjokzfwVuQgI+tyOEuwtiwfBlQr1BA7OL7w8N71HvQF1TYXa+yT645Iw2UvKmrmQvoO
+            7bemCGNQqMMpWUVVvpnjFuaGZVqzvZSIOirhGZ7rGGBjri/PA5exaINqKKc1i2JuyaNN3L
+            4PWsYvZgZFeykjOWqua4n2P2CbUNVIj6ROWFHRRlHJKDFKZxD+5P/IFMlFVDUXJjorU4PP
+            04hz0EcA7dv2lKXYU5cX2ax7TQ2ble9micfxRwlI1piNmyOM3QIue6L5ALUci66QoYGBR9
+            VzWyA5BDxf4x/+Qdf7Um3YOfbEzX8XG2GAlwhWFHpe6xykia/Dxl57SR2+M+PDbI/zPEv5
+            Ucl+ezn8NyZ8clJdxbug50J0PYLNeXvX7/5ewiuZhxkT0ZvL/57sMu3eKLOYTk5yXE6+wN
+            TNdUhNj3pq0ZcGzM0JlKdR3rKyF5B2R4w0Ab3RnFWq4kCCUZCReqHxhvsW/bw9ZdOoiGuh
+            Dh0voQfZDGBUVe2ZPZ37v36Gv/5H/R9xsAAP//AwAUfTetAgUAAA==
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Name, Content-Type, Accept, Cache-Control, Sdk-Context
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Max-Age: "3600"
+            Content-Length: 49,49
+            Content-Type: application/json; charset=utf-8
+            Date: Tue, 12 Dec 2023 08:12:35 GMT
+            Strict-Transport-Security: max-age=31536000
+            X-Content-Type-Options: nosniff
+            X-Ms-Session-Id: 6633DD01-E47E-4865-A680-BED38A302880
+        body: '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    created: 1702368756
+    reqTimestampMock: 2023-12-12T08:12:36.353093511Z
+    resTimestampMock: 2023-12-12T08:12:36.539839415Z
+---
+version: api.keploy.io/v1beta1
+kind: Http
+name: mocks
+spec:
+    metadata:
+        name: Http
+        operation: POST
+        type: HTTP_CLIENT
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /v2/track
+        header:
+            Content-Encoding: gzip
+            Content-Length: "753"
+            Content-Type: application/x-json-stream
+        body: !!binary |
+            H4sIAAAAAAAAA6xUy27cSAz8FUGnLGDJ/X7MLcjsw0h2YyTeHHKjutmxYI00aLW8GwT597
+            A1DmxgryvoRJHFYrGob+0MJ2wP7evz+ddHnMvaXrVl3EOCCdlxQe8dcwcuDsL1SnqptftM
+            WeNb/EpZVoXAg8dOosFORaa7QabQxYieMx6Z0Kpiwpe1PXxrYewjPo4B+2X9hHkdl5lAIg
+            4jzJRGn8O0bLHPy4Q381pgDpXLNJ6gu2QRn/7VvMz4yyV/xbWi9GOkPG0U90KLjg2adSpw
+            1TkZfGecSEwk4EzDpWycC+YZpn6NDy+ILGXGEg6iF7wnAOHb71dthAKV/AAr3n09V0K7WM
+            cav9rDx6eUR8ztQVz9lPWCdx2m8XrdhgkfcTpDXjFfh+V0gjlS+TkvZ8xlxF2g4xIeMDdv
+            lrnAOFe09jeYVqTEPyHcU6i5OTbvpzptTEpxo6XyArS3emCJmQApJKmUtDJ6xniiPUgbnT
+            IqodAakUWPGgw4wnz/sXmdCbZgKFvenZBPpm7sNi9xC6V5Fsf1rOeM1aqtnLfSfMA4ZirE
+            +IIlKTAs61iqOUKw4Bzn0YFVmkhILYiLZBgdszr66MEok0TQOsXBeauSioKraFCpwRLcu3
+            EI1GhCEpkQyREk48/4MzfRS/PUvAoTESL1gOgIx0uZpEdjBZFxJio/kBGsdNG6ISLnfhAJ
+            bZBBEIugYh3/wzbXO2hu4m6/efu3gydlsO6+2f0mhVEDDKnzsfrNGNMBBt4FR8OZVLHqiu
+            s2CWLZ1uaGfPclQ7nQ/u9q/5+1viVv4/RCn+N+O83vf/19/a4O03DRvBqW5eGfJZ/qJb3Z
+            cq5j3UK5b/6A9Z6KEL1PVjPgaNLgkgzOMS+F4rRP5IZBTNGlwCwPCkRQjAiJ4AfGLXprL/
+            66naAk6kKAe+tL9JkaF/XGTrRgMuBp/wfRHdzWM2nu9l8Rt713Xl+1Hwvksp2fwpb1whj5
+            nZ4fAAAA//8DAHY6arfIBAAA
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Name, Content-Type, Accept, Cache-Control, Sdk-Context
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Max-Age: "3600"
+            Content-Length: 49,49
+            Content-Type: application/json; charset=utf-8
+            Date: Tue, 12 Dec 2023 08:12:35 GMT
+            Strict-Transport-Security: max-age=31536000
+            X-Content-Type-Options: nosniff
+            X-Ms-Session-Id: 4D9ABD80-0745-4195-B4AF-C768A06473BE
+        body: '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    created: 1702368756
+    reqTimestampMock: 2023-12-12T08:12:36.545566428Z
+    resTimestampMock: 2023-12-12T08:12:36.735349652Z
+---
+version: api.keploy.io/v1beta1
+kind: Http
+name: mocks
+spec:
+    metadata:
+        name: Http
+        operation: POST
+        type: HTTP_CLIENT
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /v2/track
+        header:
+            Content-Encoding: gzip
+            Content-Length: "897"
+            Content-Type: application/x-json-stream
+        body: !!binary |
+            H4sIAAAAAAAAA6xUy27cRhD8FYInGxCpeT/2Jlh2IliJBFvOIbeenh6JEEUuSK4Sw/C/p8
+            mVLB1y1GKxxPY0a2qqqudHPcAD1bv6bL//+EjDMtcn9dJtJSWUbqTi740IO6l2KrbGRi9M
+            +Ju7us/0nbu8QZQYqdHkqDFZ2Cbpgk3OFKWQWShrVky4nevdjxq6NtNjh9SO8180zd04ME
+            im1MHAbbyM/XjI7TT2dDHMCwy4cum7B2iOXcynfTeMA70/9s80ryhtl7nPOiOjsqoRyYrG
+            oDRN0BgbF1QRqoAUFo6vdcNC0wB9O+f7V0TGZaAFd6pVsmUAFeufJ3WGBVbyCWa6+b5fCW
+            1ina/1k618/tTySFO9UyfPsh7xTrHvTh/mdOj6fLrAdEtLmbjhn3G6p0foGWM/jXualo42
+            lc5HvKep+jAOC3TDCll/gn4mbvwD8I5L1cV5ddWvR87FGOmsNlEBu2OTKMIhFCzaGO11jk
+            LIwmZon4NxppCylkjkSBYcBMa82Sh9eqb0IgdpBMIYMZZkFSWjgyylKAuCCkBy3gaZlcuY
+            oo9BBzBIWvOT38s5MfbV1+psYsoL4XKYtqhND26NxJfDsCbtIrOSXem2U5akFfMVSgVEC8
+            qgcgatlzpmCqkEawoGV1DyH4nCMAcJKllMJkUlGfZ6GvMBl+rlFKEVrRSC185Y4QK4zNew
+            3F2OCAt3PDn6BltfHZb9Yam+UO4mPi7lV75ddgl5pScOC5c52an/VX/hqlrtuPptpl9cj6
+            hvw/Ar9eU5VSs7Q1ZpsEA2GacdehuFTD4WKCnrKBUZmZGt9UYaciEkEbPhHDhOgUr6xcbq
+            Im9zOhz+beDJYVqHpNoG00cTQGBo+Nc0hmRoQIvYCBmc0gqD9qsaKzeGGA9zdcEDejttDv
+            1v/N8m+kdxnyKgTVFIwOd00UL0AW3RLKUQfJll47PPDqwSiNpHwSrElLSTQcB6C1rxZNx+
+            fzfOy8aPQhBRoKXsAVXRit0qgl1SqmQwOWBWPFLIHgb0mF1OzrriSGURVsM+8yVF/auAnG
+            +XYPXbn99OL1exK6mqd2kc73lyH9Yr8cNhmlbZ14hXv8N8t84xxVi8FSDJlRSKxpWXVkYG
+            8CSdgFxyKCi8RAMKjWDBFMYkpKfo/XGOr3tYCu/CgNvWx+oLNanqn/z5DwAA//8DAIS5fe
+            lUBgAA
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Name, Content-Type, Accept, Cache-Control, Sdk-Context
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Max-Age: "3600"
+            Content-Length: 49,49
+            Content-Type: application/json; charset=utf-8
+            Date: Tue, 12 Dec 2023 08:12:36 GMT
+            Strict-Transport-Security: max-age=31536000
+            X-Content-Type-Options: nosniff
+            X-Ms-Session-Id: 2766ED5A-7EE3-4246-AC7C-6BBC7A0D905B
+        body: '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    created: 1702368757
+    reqTimestampMock: 2023-12-12T08:12:36.908265591Z
+    resTimestampMock: 2023-12-12T08:12:37.091385335Z
+---
+version: api.keploy.io/v1beta1
+kind: Http
+name: mocks
+spec:
+    metadata:
+        name: Http
+        operation: POST
+        type: HTTP_CLIENT
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: /v2/track
+        header:
+            Content-Encoding: gzip
+            Content-Length: "896"
+            Content-Type: application/x-json-stream
+        body: !!binary |
+            H4sIAAAAAAAAA6xUy27cRhD8FYInGxCpeT/2Jlh2IliJBFvOIbeenh6JEEUuSK4Sw/C/p8
+            mVLB1y1IKXbTZrqquq50c9wAPVu/psv//4SMMy1yf10m0lJZRupOLnRoSdVDsV2xic0Vr/
+            zV3dZ/rOXd4gSozUaHLUmCxsk3TBJmeKUsgslDUrJtzO9e5HDV2b6bFDasf5L5rmbhwYJF
+            PqYOA2fo39eMjtNPZ0McwLDLhy6bsHaI5dzKd9N4wDvT/2zzSvKG2Xuc86I6OyqhHJisag
+            NE3QGBsXVBGqgBQWjp91w0LTAH075/tXRMZloAV3qlWyZQAV658ndYYFVvIJZrr5vl8JbW
+            Kdr/WTrXz+1PJIU71TJ8+yHvFOse9OH+Z06Pp8usB0S0uZuOGfcbqnR+gZYz+Ne5qWjjaV
+            zke8p6n6MA4LdMMKWX+CfiZu/APwjkvVxXl11a8j52KMdFabqMBGb5MowiEULNoY7XWOQs
+            jCZmifg3GmkLKWSORIFhwExrzZKH16pvQiB2kEwhgxlmQVJaODLKUoC4IKQHLeBpmVy5ii
+            j0EHMEicjwD8Xc6Jsa++VmcTU14Il8O0RW16cGskvhyGNWkXmZXsSrdNWZJWzFcoFRAtKI
+            PKGbRe6pgppBKsKRhcQcl/JArDHCSoZDGZFJVk2OtpzAdcqpcpQitaKQS/O2OFC+AyX8Ny
+            dzkiLNzx5OgbHH11WPaHpfpCuZt4XMqvfLvsEvKbnjgsXOZkp/5X/YWrarXj6reZfnE9or
+            4Nw6/Ul+dUrewMWaXBAtlknHbobRQy+VigpKyjVGRkRrbWG2nIhZBEzIZz4DgFKukXG6uL
+            vO3pcPi3gSeHaV2SaltMnxnaS98oFL4xwfsmKaMbE733DhLClpaVG0OMh7m64AW9nTaH/j
+            f+bxP9o7hPEdCmKCTgOV20EH1AWzRLKQRfZtnwDNmBVQJR+yhYhZiSdjIIWG9BK56M2+/v
+            xnnZ+FEIIgq0lD2gKlqxW0WwS0qVDCYHzIpXCtnDgB6zy8lZVxypLMJq2Ge+pKh/FZDz7R
+            Ksfvvz2+nlKnYlVfUujeM9b+7DeiV+OEzTKvsa8ep3mO/WPaYYi7cCJLmSQtG48tLKyACe
+            pBOQSw6FrZFoQKERLJjCmIT0xA4d9/i6h6XwKQy4HX2svlCTqv7Jv/8AAAD//wMA7yAWUl
+            QGAAA=
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+    resp:
+        status_code: 200
+        header:
+            Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Name, Content-Type, Accept, Cache-Control, Sdk-Context
+            Access-Control-Allow-Origin: '*'
+            Access-Control-Max-Age: "3600"
+            Content-Length: 49,49
+            Content-Type: application/json; charset=utf-8
+            Date: Tue, 12 Dec 2023 08:12:37 GMT
+            Strict-Transport-Security: max-age=31536000
+            X-Content-Type-Options: nosniff
+            X-Ms-Session-Id: D5F35DF5-00D2-4245-BF10-E7B50E9B3B0E
+        body: '{"itemsReceived":1,"itemsAccepted":1,"errors":[]}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+    objects: []
+    created: 1702368758
+    reqTimestampMock: 2023-12-12T08:12:37.912407405Z
+    resTimestampMock: 2023-12-12T08:12:38.087203028Z
